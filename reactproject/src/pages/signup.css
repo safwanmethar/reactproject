@@ -1,0 +1,198 @@
+.signup-page {
+  min-height: 100vh;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 16px 40px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.signup-page .signup-container {
+  width: 100%;
+  max-width: 432px;
+}
+
+.signup-page .brand {
+  color: #1877f2;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.signup-page .signup-form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.signup-page .signup-header {
+  border-bottom: 1px solid #dadde1;
+  margin: 0 -16px 4px;
+  padding: 0 16px 12px;
+}
+
+.signup-page .title {
+  color: #1c1e21;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.signup-page .subtitle {
+  color: #606770;
+  font-size: 15px;
+  margin: 4px 0 0;
+}
+
+.signup-page .row,
+.signup-page .dob,
+.signup-page .gender {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-page .field-group {
+  flex: 1;
+}
+
+.signup-page .signup-form input,
+.signup-page .signup-form select {
+  width: 100%;
+  height: 40px;
+  background: #f5f6f7;
+  border: 1px solid #ccd0d5;
+  border-radius: 5px;
+  color: #1c1e21;
+  font-size: 15px;
+  padding: 11px 12px;
+}
+
+.signup-page .signup-form input:focus,
+.signup-page .signup-form select:focus {
+  background: #fff;
+  border-color: #1877f2;
+  outline: none;
+}
+
+.signup-page .section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signup-page .section-label {
+  align-items: center;
+  color: #606770;
+  display: inline-flex;
+  font-size: 12px;
+  gap: 6px;
+}
+
+.signup-page .info-badge {
+  align-items: center;
+  background: #606770;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 700;
+  height: 14px;
+  justify-content: center;
+  width: 14px;
+}
+
+.signup-page .gender-option {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccd0d5;
+  border-radius: 5px;
+  color: #1c1e21;
+  display: flex;
+  flex: 1;
+  font-size: 15px;
+  height: 36px;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.signup-page .gender-option input {
+  background: transparent;
+  border: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.signup-page .legal-text {
+  color: #777;
+  font-size: 11px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.signup-page .error {
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.signup-page .btn {
+  width: 194px;
+  height: 36px;
+  margin: 4px auto 0;
+  background: #00a400;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 32px;
+}
+
+.signup-page .btn:hover {
+  background: #36a420;
+}
+
+.signup-page .link {
+  color: #1877f2;
+  display: block;
+  font-size: 17px;
+  margin-top: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.signup-page .link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .signup-page {
+    padding: 16px 12px 24px;
+  }
+
+  .signup-page .brand {
+    font-size: 46px;
+  }
+
+  .signup-page .row,
+  .signup-page .dob,
+  .signup-page .gender {
+    flex-direction: column;
+  }
+
+  .signup-page .btn {
+    width: 100%;
+  }
+}
