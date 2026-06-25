@@ -8,9 +8,13 @@
   --green-hover: #36a420;
   --card: #ffffff;
   --border: #ddd;
+
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .signin-page,
@@ -21,26 +25,29 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* LAYOUT */
+/* MAIN CONTENT */
 .signin-page .container {
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
+/* WRAPPER */
 .signin-page .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 980px;
-  padding: 20px;
-  gap: 40px;
+  width: 100%;
+  max-width: 980px;
+  gap: 60px;
 }
 
 /* LEFT */
 .signin-page .left {
   flex: 1;
+  max-width: 500px;
 }
 
 .signin-page .left h1 {
@@ -53,16 +60,17 @@
 .signin-page .left p {
   font-size: 28px;
   margin-top: 10px;
-  max-width: 500px;
+  line-height: 1.2;
 }
 
 /* CARD */
 .signin-page .card {
-  width: 396px;
+  width: 100%;
+  max-width: 396px;
   background: var(--card);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* INPUT */
@@ -119,7 +127,7 @@
 .signin-page .link {
   display: block;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 12px;
   color: var(--blue);
   text-decoration: none;
 }
@@ -135,12 +143,14 @@
   margin-bottom: 8px;
 }
 
+/* FOOTER */
 .signin-page .footer {
-  margin-top: 40px;
+  width: 100%;
   padding: 20px;
   text-align: center;
   font-size: 12px;
   color: #65676b;
+  background: #fff;
 }
 
 .signin-page .footer-lang,
@@ -161,4 +171,64 @@
 .signin-page .footer-lang li:hover,
 .signin-page .footer-links li:hover {
   text-decoration: underline;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .signin-page .wrapper {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .signin-page .left {
+    max-width: 100%;
+  }
+
+  .signin-page .left h1 {
+    font-size: 52px;
+  }
+
+  .signin-page .left p {
+    font-size: 22px;
+  }
+
+  .signin-page .card {
+    width: 100%;
+    max-width: 396px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .signin-page .container {
+    padding: 15px;
+  }
+
+  .signin-page .wrapper {
+    gap: 20px;
+  }
+
+  .signin-page .left h1 {
+    font-size: 42px;
+  }
+
+  .signin-page .left p {
+    font-size: 18px;
+  }
+
+  .signin-page .card {
+    padding: 15px;
+  }
+
+  .signin-page .btn-login,
+  .signin-page .btn-create {
+    font-size: 16px;
+  }
+
+  .signin-page .footer {
+    font-size: 11px;
+    padding: 15px;
+  }
 }
